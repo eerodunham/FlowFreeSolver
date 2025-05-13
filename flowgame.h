@@ -11,6 +11,11 @@ class FlowGame
         bool empty;
         bool endpoint;
         char color;
+        Tile() {
+            empty = true;
+            endpoint = false;
+            color = 0;
+        }
     };
 public:
     FlowGame();
@@ -19,4 +24,5 @@ public:
 private:
     unsigned int game_size_;
     vector<vector<Tile>> board_;
+    vector<char> endpoints_;
 };
